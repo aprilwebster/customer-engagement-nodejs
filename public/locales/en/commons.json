@@ -1,0 +1,67 @@
+{
+  "title": "IBM Watson AI Studio",
+  "dashboard": {
+    "title": "Watson AI Studio",
+    "description": "A suite of powerful train and benchmark services",
+    "cta": {
+      "label": "Create Benchmark",
+      "title": "Create Benchmark"
+    }
+  },
+  "construction": {
+    "title": "{{page}} is under construction",
+    "description": "The {{page}} page is under construction and will be available soon"
+  },
+  "logoutConfirmIBMID": "You are logged in to IBM Bluemix with your IBM ID. Logging out of Bluemix also signs you out of other IBM applications that you might have open in other browser windows. Do you want to log out?",
+  "logoutConfirm": "Do you want to log out?",
+  "leftNav": {
+    "home": "Overview",
+    "benchmarks": "Benchmarks",
+    "train": "Train",
+    "datasouces": "Data Sources"
+  },
+  "benchmarks": {
+    "title": "Benchmarks List",
+    "description": "List of available benchmark tests.",
+    "cta": {
+      "label": "Create New Benchmark",
+      "title": "Create one or more new benchmarks."
+    }
+  },
+  "benchmark": {
+    "title": "Benchmark Detail",
+    "description": "Results produced by executing the benchmark test."
+  },
+  "createBenchmarks": {
+    "title": "Create Benchmarks",
+    "description": "Create one or more new benchmark tests.",
+    "cta": {
+      "label": "TBA",
+      "title": "TBA."
+    }
+  },
+  "longDate": "{{date, MMM D, YYYY}}",
+  "actions": {
+    "list": "List of options",
+    "openList": "Open and close list of options",
+    "create": "Create",
+    "next": "Next",
+    "cancel": "Cancel",
+    "rename": "Rename",
+    "remove": "Remove",
+    "delete": "Delete",
+    "close": "Close",
+    "save": "Save",
+    "removeAndDelete": "Remove and delete"
+  },
+  "errors": {
+    "error": "Error",
+    "warning": "Warning",
+    "success": "Success",
+    "info": "Info",
+    "loadBenchmarks": "Failed to load benchmarks"
+  },
+  "notifications": {
+    "success": "Success"
+  }
+}
