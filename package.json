@@ -1,5 +1,5 @@
 {
-  "name": "customer-engagement-demo",
+  "name": "customer-engagement-demo-issue992",
   "version": "1.0.0",
   "description": "Customer Engagement Demo",
   "engines": {
@@ -23,6 +23,8 @@
     "babel-register": "^6.22.0",
     "babelify": "^7.3.0",
     "body-parser": "^1.16.0",
+    "carbon-components": "^8.10.0",
+    "carbon-components-react": "^5.27.0",
     "cf-deployment-tracker-client": "^0.1.2",
     "cloudant": "^1.7.1",
     "dotenv": "^4.0.0",
@@ -41,6 +43,8 @@
     "react-addons-pure-render-mixin": "^15.4.2",
     "react-dom": "^15.4.2",
     "react-prism": "^4.0.0",
+    "react-router": "*",
+    "react-router-dom": "^4.2.2",
     "uglifyify": "^3.0.4",
     "underscore": "^1.8.3",
     "watson-developer-cloud": "^2.30.0",

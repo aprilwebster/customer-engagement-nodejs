@@ -4,7 +4,6 @@ import { JsonLinkInline, Icon } from 'watson-react-components';
 import Output from './output.jsx';
 import Input from './input.jsx';
 import ResetConversationLink from './reset-conversation-link.jsx';
-import LanguageSelector from './language-selector.jsx';
 
 // load initial conversation state, a json object
 // hack to get around deep clone of initial conversation for reseting conversation
@@ -14,9 +13,9 @@ const initialConversation = require('../public/data/initial-conversation');
 const systemConversation = require('../public/data/initial-tone-analyzer-payload');
 
 // French
-const initialConversationFrenchString = JSON.stringify(require('../public/data/initial-conversation-fr'));
-const initialConversationFrench = require('../public/data/initial-conversation-fr');
-const systemConversationFrench = require('../public/data/initial-tone-analyzer-payload-fr');
+// const initialConversationFrenchString = JSON.stringify(require('../public/data/initial-conversation-fr'));
+// const initialConversationFrench = require('../public/data/initial-conversation-fr');
+// const systemConversationFrench = require('../public/data/initial-tone-analyzer-payload-fr');
 
 const CUSTOMER_NAME = 'Fred';
 const CUSTOMER_HANDLE = '@Fred_theConsumer';
@@ -47,7 +46,6 @@ const Demo = React.createClass({
       newUtteranceAvatarType: initialLastUtterance.user.type === 'agent' ? 'customer_avatar' : 'agent_avatar', // 'customer_avatar'
       showJson: false,
       isResetting: false,
-      language: 'en',
       loading: false,
       initializing: true,
     };
@@ -148,7 +146,7 @@ const Demo = React.createClass({
         headers: { 'content-type': 'application/json' },
         body: JSON.stringify(voteData),
       }).then(this.handleErrors).then((response) => {
-          console.log('watson tone accuracy logged: '.concat(response));
+        console.log('watson tone accuracy logged: '.concat(response));
       }).catch((error) => {
         this.setState({
           error,
@@ -163,7 +161,7 @@ const Demo = React.createClass({
       headers: { 'content-type': 'application/json' },
       body: JSON.stringify(newToneData),
     }).then(this.handleErrors).then((response) => {
-        console.log('suggested tone logged: '.concat(response));
+      console.log('suggested tone logged: '.concat(response));
     }).catch((error) => {
       this.setState({
         error,
@@ -171,11 +169,11 @@ const Demo = React.createClass({
     });
   },
 
-  updateLanguage(language) {
-    this.setState({
-      language,
-    });
-  },
+  // updateLanguage(language) {
+  //   this.setState({
+  //     language,
+  //   });
+  // },
 
   handleErrors(response) {
     if (!response.ok) {
@@ -314,10 +312,6 @@ const Demo = React.createClass({
             <Icon type="loader" size="large" />
           </div>) :
           (<div>
-            <LanguageSelector
-              onLanguageSelection={this.updateLanguage}
-            />
-            <div>selected language is {this.state.language}</div>
             <Output
               conversation={this.state.conversation.utterances}
               onVote={this.onVote}

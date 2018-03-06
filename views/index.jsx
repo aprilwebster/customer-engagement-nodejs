@@ -1,9 +1,9 @@
 import React from 'react';
 import Layout from './layout.jsx';
-import Demo from './demo.jsx';
+import App from './app.jsx';
 
 export default function () {
   return (
-    <Layout><Demo /></Layout>
+    <Layout><App /></Layout>
   );
 }

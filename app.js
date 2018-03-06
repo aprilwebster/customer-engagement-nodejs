@@ -34,6 +34,11 @@ app.get('/', (req, res) => {
   res.render('index');
 });
 
+// Endpoint for web app
+app.get('/login', (req, res) => {
+  res.render('login');
+});
+
 // Endpoint for Tone Analyzer tone_chat endpoint
 app.post('/api/tone_chat', (req, res, next) => {
   toneAnalyzer.tone_chat(req.body, (err, tone) => {
